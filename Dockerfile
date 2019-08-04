@@ -5,6 +5,6 @@ RUN apt update && \
         wget --quiet https://gstreamer.freedesktop.org/data/pkg/android/1.14.4/gstreamer-1.0-android-universal-1.14.4.tar.bz2 && \
         tar jxf gstreamer-1.0-android-universal-1.14.4.tar.bz2 -C /
 
-CMD /bin/bash
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-
+CMD ["/bin/bash"]
